@@ -45,7 +45,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ei3ex"]
-radius = 44.0
+radius = 36.0
 height = 100.0
 
 [node name="Mob" type="RigidBody2D" groups=["mobs"]]
@@ -59,7 +59,6 @@ sprite_frames = SubResource("SpriteFrames_b7msm")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_ei3ex")
 

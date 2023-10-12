@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://xsx6kxunj3s0"]
+[gd_scene load_steps=7 format=3 uid="uid://xsx6kxunj3s0"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ii2ue"]
 [ext_resource type="PackedScene" uid="uid://cxaneroqj3hq" path="res://Player.tscn" id="2_b03xf"]
 [ext_resource type="PackedScene" uid="uid://b15mpu8kjsqly" path="res://Mob.tscn" id="2_mu72s"]
+[ext_resource type="Texture2D" uid="uid://d2cd4mgbcisay" path="res://icon.svg" id="3_l6ii6"]
 [ext_resource type="PackedScene" uid="uid://dtb38p0j6p3iu" path="res://hud.tscn" id="4_u32rn"]
 
 [sub_resource type="Curve2D" id="Curve2D_s5f4o"]
@@ -15,7 +16,27 @@ point_count = 5
 script = ExtResource("1_ii2ue")
 mob_scene = ExtResource("2_mu72s")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_l6ii6")
+expand_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0.901961, 0.12549, 1)
+
 [node name="Player" parent="." instance=ExtResource("2_b03xf")]
+visible = false
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
